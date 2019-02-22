@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Database</title>
+	<script type="text/javascript" src="movieDB.js"></script>
+</head>
+<body>
+<p>
+	var movies = [<br>
+	{title: "In Bruges", hasWatched: true, rating: 5},<br>
+	{title: "Frozen", hasWatched: false, rating: 4.5},<br>
+	{title: "Les Miserable", hasWatched: false, rating: 3.5}<br>
+]<br>
+<br>
+function buildString(movie) {<br>
+	var result = "You have ";<br>
+	if (movie.hasWatched) {<br>
+		result += "watched ";<br>
+
+	}<br>
+	else {<br>
+		result += "not seen ";<br>
+
+	}<br>
+	result += "\"" + movie.title + "\" - ";<br>
+	result += movie.rating + " stars";<br>
+	return result;<br>
+}<br>
+<br>
+movies.forEach(function(movie){<br>
+	console.log(buildString(movie));<br>
+})<br>
+<br>
+<br>
+see in console --->
+</p>
+</body>
+</html>
